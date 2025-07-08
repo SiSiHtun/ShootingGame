@@ -30,7 +30,7 @@ public class Player extends Character implements KeyListener
 		if (e.getKeyCode()==KeyEvent.VK_SPACE) 
 		{
 			GameWorld.playerBullets.add(
-					new PlayerBullet(x,y,10,-10));
+					new PlayerBullet(x,y,6,-10));
 			GameWorld.playerBullets.add(
 					new PlayerBullet(x+10,y,2,-10));
 			GameWorld.playerBullets.add(

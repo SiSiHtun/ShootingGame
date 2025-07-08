@@ -5,7 +5,7 @@ public class CurveEnemy extends Enemy
 public CurveEnemy(double x, double y, double vx, double vy)
  {
 		super(x, y, vx, vy);
-		this.life=3;
+		this.life=3+GameWorld.stage;
 		
 		// TODO 自動生成されたコンストラクター・スタブ
  }
@@ -14,11 +14,11 @@ public CurveEnemy(double x, double y, double vx, double vy)
 		super.move();
 		if(x<GameWorld.player.x) 
 		{
-			x++;
+			x+=GameWorld.stage;
 		}
 		if (x>GameWorld.player.x)
 		{
-			x--;
+			x-=GameWorld.stage;
 		}
 	}
 	public void draw(MyFrame f) 
