@@ -4,6 +4,7 @@ public class DropEnemy extends Enemy {
 
 	public DropEnemy(double x, double y, double vx, double vy) {
 		super(x, y, vx, vy);
+		this.life=1;
 		
 		// TODO 自動生成されたコンストラクター・スタブ
 	}

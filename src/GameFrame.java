@@ -8,6 +8,11 @@ public class GameFrame extends MyFrame {
 		GameWorld.playerBullets=new Vector<PlayerBullet>();
 		GameWorld.enemies=new Vector<Enemy>();
 		GameWorld.enemies.add(new EnemyBase(100,50,1,0));
+		GameWorld.enemies.add(new StraightEnemy(50, 50, 0, 1));
+		GameWorld.enemies.add(new RandomEnemy(100, 50, 1, 0));
+	    GameWorld.enemies.add(new DropEnemy(150, 50, 0, 1));
+	    GameWorld.enemies.add(new CurveEnemy(200, 50, 1, 0));
+
 		while(true)
 		{
 		
@@ -90,7 +95,7 @@ public class GameFrame extends MyFrame {
 		}
 	}
 	public boolean checkHit(Character a,Character b) {
-		if (Math.abs(a.x-b.x)<=30 && Math.abs(a.y-b.y)<=30) {
+		if (Math.abs(a.x-b.x)<=20 && Math.abs(a.y-b.y)<=20) {
 			return true;
 		}else {
 			return false;
